@@ -1,0 +1,63 @@
+<html>
+<head>
+<title>Ajax program</title>
+</head>
+<body>
+<button id="populate"> populate data </button>
+<table>
+   <thead>
+<tr>
+<td>ID</td>
+<td>Name</td>
+<td>Username</td>
+<td>Email</td>
+</tr>
+   </thead>
+<tbody id="result_area">
+<tr>
+//<td>please wait</td>
+</tr>
+</tbody>
+
+
+<script>
+
+var xhr = new XMLHttpRequest();
+xhr.open("get","adminuser.php");
+//xhr.send();
+document.getElementById("populate").addEventListener("click",function(){
+xhr.send();
+})
+xhr.onreadystatechange = function(){
+console.log(xhr.readyState);
+if(xhr.readyState == 4){
+console.log("response received");
+if(xhr.status==200)
+{
+//alert("success message");
+//alert(xhr.responseText);
+var result_data = JSON.parse(xhr.responseText);
+var html_content = ""; 
+//console.log(result_data);
+for(i=0;i<result_data.length;i++)
+{
+var current_record = result_data[i];
+//console.log(current_record);
+html_content = html_content+"<tr><td>"+current_record.id+"</td><td>"+current_record.name+"</td><td>"+current_record.username+"</td><td>"+current_record.email+"</td></tr>"
+}
+
+document.getElementById("result_area").innerHTML = html_content; 
+
+}
+else
+{
+//alert("error");  
+}
+}
+}
+
+</script>
+
+
+</body>
+</html>

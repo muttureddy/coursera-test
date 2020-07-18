@@ -1,0 +1,40 @@
+<?php
+                      include 'dbtest.php';
+                      $username = $_SESSION["username"];
+                      $tsql = "select * from roomb where Username= '$username'";
+                      $tre = mysqli_query($con,$tsql) or die( mysqli_error($con));
+                      $data = mysqli_num_rows($tre);
+                     
+
+while($trow=mysqli_fetch_array($tre))
+                  { 
+                      $sl_no= $trow['Sl_no'] ;
+                      $fname=$trow['Fname'];
+                      $lname= $trow['Lname'] ;
+                      $email=$trow['Email'];
+                      $nation=$trow['National'];
+                      $phone= $trow['Phone'] ;
+                      $troom= $trow['TRoom'] ;
+                      $people=$trow['People'];
+                      $cin=$trow['cin'];
+                      $cout=$trow['cout'];
+                      $status=$trow['status'];
+                      $nodays=$trow['No_days'];
+                  }
+                   
+ ?>
+ <?php
+                  include 'dbtest.php';
+                  $tsql = "select * from rooms where roomtype =  '$troom' ";
+                  $tre = mysqli_query($con,$tsql) or die( mysqli_error($con));
+                  $data = mysqli_num_rows($tre);
+              
+while($row=mysqli_fetch_array($tre))
+                  { 
+                      $slno= $row['sl_no'] ;
+                      $roomtype=$row['roomtype'];
+                      $room_no= $row['room_no'] ;
+                      $amount=$row['fees']; 
+                  }
+                   
+ ?>

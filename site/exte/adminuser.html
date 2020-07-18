@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Manage Usedetails</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  
+</head>
+<body>
+
+
+  <div class="container">
+
+    <h1 class="text-primary text-uppercase text-center">User Details</h1>
+ 
+  <div class="" id="records_content">
+    
+  </div>
+    
+  </div>
+
+
+<script>
+
+  $(document).ready(function(){
+
+    readRecord();
+
+  })
+  
+  function readRecord(){
+    var readrecord = "readrecord";
+
+    $.ajax({
+            url:"adminuser.php",
+            type:"post",
+            data :{readrecord:readrecord},
+            success :function(data,status){
+              $('#records_content').html(data);
+            }
+    });
+  }
+
+</script>
+
+
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+  Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form >
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+  </div>
+</form>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+</body>
+</html>
+<!-- <script>
+  var htajax = new XMLHttpRequest();
+  
+  
+  
+  htajax.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+    
+
+         var data = JSON.prase(htajax.responseText);
+      console.log(this.responseText);
+    }
+  }
+  htajax.open("GET","adminuser.php",true); 
+  htajax.send();
+
+</script>
+ -->
+
+
+<?php 
+
+    include 'dbtest.php';
+
+
+    extract($_POST);
+
+    if (isset($_POST['readrecord'])) {
+
+      $data = '<table class = "table tabel-bordered table-striped">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Email</th>
+            <th>Username</th>
+            <th>Password</th>
+            <th>Edit Action</th>
+            <th>Delete Action</th>
+          </tr>';
+
+          $display = "SELECT * FROM 'login'";
+          $result = mysqli_query($con,$display);
+
+          if (mysqli_num_rows($result) > 0) {
+
+            $number = 1;
+            while($row = mysqli_fetch_array($result)){
+
+              $data .='<tr>
+                <td>'.$number.'</td>
+                <td>'.$row['Firstname'].'</td>
+                <td>'.$row['lastname'].'</td>
+                <td>'.$row['Email'].'</td>
+                <td>'.$row['Username'].'</td>
+                <td>'.$row['Password'].'</td>
+                <td><button onclick = "Getuserdetails('.$row['Sl_no'].')" class = "btn btn-warning">Edit</button></td>
+                <td><button onclick = "Deleteuser('.$row['Sl_no'].')" class = "btn btn-danger">Delete</button></td>
+                </tr>';
+                $number++;
+            }
+
+          }
+
+
+    }
+/*
+     if (isset($_POST['name']) && isset($_POST['username']) && isset($_POST['email']) && isset($_POST['feedback'])) {
+     /* $name = $_POST['name'];
+      $uname = $_POST['uname'];
+      $email = $_POST['email'];
+      $fee = $_POST['feed'];*/
+
+
+      $feedbac = "INSERT INTO `feedback`( `name`, `email`, `username`, `feed`) VALUES ('$name','$email','$username','$feedback')";
+      $res = mysqli_query($con,$feedbac);
+      if ($res) {
+       echo "<script>alert('Feedback Submited Successfully')</script>";
+       }
+    }
+*/
+   ?>
