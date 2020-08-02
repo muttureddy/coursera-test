@@ -1,6 +1,7 @@
 body{
     font-family: 'Times New Roman', Times, serif;
     background-color: thistle;
+    margin: 0px;
 }
 h1{
    text-align: center;
@@ -8,14 +9,20 @@ h1{
    font-size: 40px;
 
 }
-
-section{
-   width: 450px;
-   float: left;
-   margin: 25px;
+main{
+  padding: 10px;
 }
-div{
+.main-sec{
+   margin: 60px;
+   align-items: flex-end;
+}
+.section{
+   float: left;
+   margin: 30px;
+}
+.div1{
    padding: 20px;
+   width: 360px;
    border: rosybrown;
    border-style: double;
    text-align: center;
