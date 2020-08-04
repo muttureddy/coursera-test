@@ -2,31 +2,48 @@ body{
     font-family: 'Times New Roman', Times, serif;
     background-color: thistle;
 }
+
 h1{
    text-align: center;
    color: aquamarine;
    font-size: 40px;
 
 }
-main{
+/* main{
    content: "";
   display: table;
   clear: both;
 }
-
-div{
-   float: left;
-  width: 30.33%;
-  padding: 20px;
+*/
+div{  
    border: rosybrown;
    border-style: double;
-   text-align: center;
    background-color: sandybrown;
+} 
+
+* {
+  box-sizing: border-box;
 }
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  height: 100%; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 h4{
    text-decoration-color: salmon;
 }
-span > h4{
+/* span > h4{
    float: right;
    width: 40%;
    background-color: slateblue;
@@ -34,7 +51,7 @@ span > h4{
    text-align: center;
    margin: -20px;
    border:solid 1px;
-}
+} */
 
 marquee{
    font-size: 20px;
