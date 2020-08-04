@@ -31,6 +31,7 @@ div{
 /* Clear floats after the columns */
 .row:after {
   content: "";
+  padding: 10px;
   display: table;
   clear: both;
 }
@@ -38,14 +39,15 @@ div{
 h4{
    text-decoration-color: salmon;
 }
- span > h4{
+ span > h4 {
    float: right;
-   width: 40%;
+   width: 30%;
+   height: 35px;
    background-color: slateblue;
-   padding: 8px;
+   padding: 9px;
    text-align: center;
-   margin: auto;
-   border:solid 1px;
+   margin-top: -5px;
+   border: solid px;
 } 
 
 marquee{
