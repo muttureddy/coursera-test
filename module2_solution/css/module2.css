@@ -38,15 +38,15 @@ div{
 h4{
    text-decoration-color: salmon;
 }
-/* span > h4{
+ span > h4{
    float: right;
    width: 40%;
    background-color: slateblue;
    padding: 8px;
    text-align: center;
-   margin: -20px;
+   margin: auto;
    border:solid 1px;
-} */
+} 
 
 marquee{
    font-size: 20px;
