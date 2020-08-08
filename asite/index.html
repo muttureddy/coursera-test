@@ -1,4 +1,4 @@
-	<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
     <head>
         <title>Article website index &#9882;</title>
@@ -10,36 +10,35 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-  <style type="text/css" media="screen">
-  	.margin {margin-bottom: 44px;}
-  .bg-1 { 
-    background-color: #1abc9c; /* Green */
-    color: #ffffff;
-  }
+  
+  
+	<style type="text/css" media="screen">
 
-  </style>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-  			  <style type="text/css" media="screen">
-			  	.margin {margin-bottom: 45px;}
-			  .bg-1 { 
-			    background-color: #1abc9c; /* Green */
-			    color: #ffffff;
-			  }
-			  body {
-      
-      font-family:'TIMES NEW ROMAN', sans-serif;
-      background-color: rgb(9,25,42);
-       background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
-    }
-			  </style>
+		*{
+			box-sizing: border-box;
+		}
+	.margin {margin-bottom: 45px;}
+		  .bg-1 { 
+		    background-color: #1abc9c; /* Green */
+		    color: #ffffff;
+		  }
+
+	  body {
+		      font-family:'TIMES NEW ROMAN', sans-serif;
+		       position: relative;
+		    }
+
+		#article1, #article2 ,#article3{
+			background-image:linear-gradient(to top, #30cfd0 0%, #330867 100%);
+			border: 3px solid !important;
+		}  
+
+		
+		
+	</style>
     </head>
   <body>
-    	<nav class="navbar navbar-expand-lg navbar-light"style="background-color: #e3f2fd;">
+    	<nav class="navbar navbar-expand-lg navbar-light"style="background-color: #e3f2fd;margin: 2px 0px 2px 0px;">
 			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
 			    <span class="navbar-toggler-icon"></span>
 			  </button>
@@ -53,9 +52,18 @@
 			        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
 			      </li>
 			      &nbsp;&nbsp;&nbsp;&nbsp;
-			      <li class="nav-item">
-			        <a class="nav-link" href="#">Articles</a>
-			      </li>
+			      <li class="nav-item dropdown">
+			              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			                Articles
+			              </a>
+			              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+			                <a class="dropdown-item" href="#article1">Article-1</a>
+			                <a class="dropdown-item" href="#article2">Article-2</a>
+			                <a class="dropdown-item" href="#article3">Article-3</a>
+			                <div class="dropdown-divider"></div>
+			                <a class="dropdown-item" href="#">All</a>
+			              </div>
+			       </li>
 			      &nbsp;&nbsp;&nbsp;&nbsp;
 			      <li class="nav-item">
 			        <a class="nav-link" href="#">Features</a>
@@ -69,11 +77,10 @@
 			  </ul>
 
 
-			  	<section>
-					<audio controls="false" src="./Mandolin.mp3" autoplay="true" loop="true">
-						<!-- <source src="./Mandolin.mp3"  type="audio/mp3">
-											 --></audio>	
-				</section>
+			  	<!-- <section>
+			  						<audio controls="false" src="./Mandolin.mp3" autoplay loop="true">
+			  							<source src="./Mandolin.mp3"  type="audio/mp3"></audio>	
+			  					</section> -->
 
 
 			  <form class="form-inline my-2 my-lg-0">
@@ -83,21 +90,16 @@
 			</div>
 		</nav>
 
+	<main>
 		
-
-		
-
-        
-        <div class="jumbotron text-center "  style="background-image:linear-gradient(to top, #30cfd0 0%, #330867 100%) /* url(image/Deluxe.jpg) */" ;>
+        <div id="article1" class="jumbotron text-center";>
 				 <div class="container text-white container-sm">
 				  	
-				  <h1 ><mark class="btn-primary" style="border-radius: 10px;padding: 5px;">First Article</mark></h1>
+				  <h1 ><mark class="btn-primary" style="border-radius: 10px;">First Article</mark></h1><br>
 				  <h2>I Feel Lost In The World</h2>
 
-				  
 				 
 				  	<br><br>
-						
 							
 						<blockquote class="blockquote text-center">
 							<p class="mb-0">&nbsp;&quot;I am a very fun loving person, so it's very hard for me to get sad over things. But lately, it has become so easy for me to lose my smile and spirit. I don't know what exactly, but I become irritated very soon. Maybe, it's a mix of all the scars that my soul has absorbed all these years. So what happens is that I am having a normal day, but suddenly, a thought enters my mind, and I feel a pinch in my heart. You know, like I skip a heartbeat or something. It almost triggers something in my brain, and I get drowned into this deep, dark well. I don't want to, but I keep thinking about it. And before I know it, I am sad. I am so, so sad that it feels as if I just had a heartbreak. But that's not true, I was fine a minute before. So, how can it happen to me?
@@ -114,17 +116,18 @@
 
 
 
-		 <div class="jumbotron text-center "  style="background-image:linear-gradient(to top, #30cfd0 0%, #330867 100%) /*  url(image/Deluxe.jpg */" ;>
+		 <div id="article2" class="jumbotron text-center"    ;>
 				 <div class="container text-white container-sm">
 
-				  <h1 ><mark class="btn-primary" style="border-radius: 10px;padding: 5px;">Second Article</mark></h1><br>
+				  <h1 ><mark class="btn-primary" style="border-radius: 10px;">Second Article</mark></h1><br>
 						<h2>Long Distance Friendship</h2>
 
 				  	<br><br>
 
 
-						<blockquote class="blockquote text-center">
-							<p class="mb-0">&nbsp;&quot;No-one talks about this, No-one feels it harder but it's as difficult and as beautiful as long distance relationships. A long distance friend is the most beautiful thing a person can have nowadays							.
+						<blockquote class="blockquote text-center"><br>
+							<p class="mb-0">&nbsp;&quot;
+								No-one talks about this, No-one feels it harder but it's as difficult and as beautiful as long distance relationships. A long distance friend is the most beautiful thing a person can have nowadays							.
 
 							In today's world, we bond with people on internet faster than in person. They know me better than anyone and better than I actually know myself.
 
@@ -132,17 +135,18 @@
 
 							I feel like even if we can't see each other physically, Our bond is closer than most. It's so easy to open up to you and go to you with any problems. We always put our hearts on our sleeve and are willing to help at the drop of a hat, which I adore.
 							Other than my best friend in real life, you are the most important person in my life.
-							•••••
+							<br>
+							 
 							You're the person who has never left my life, you're been my constant in a world where everyone leaves.
 
 							You've always cared for my well-being and happiness, have never given up on me, which I appreciate. Being friends, it's important to be real with each other and tell eachother anything that's on our minds.
-							•••••
+							<br>
 							Even oceans away, I still feel as though you're five minutes away from me. I feel emotionally connected to you.
 
 							I honestly don't even know how to put our friendship and our love and bonding for each other into words.
-							•••••
+							<br>
 							One day, we will be able to meet again and it'll be the best day of our lives. I swear, now it's my mission to meet you.
-
+							<br>
 							With Love.	😊&nbsp;&quot;
 							</p>
 							<br>
@@ -151,11 +155,12 @@
 				</div>
 		</div>
 
-	<div class="jumbotron text-center "  style="background-image:linear-gradient(to top, #30cfd0 0%, #330867 100%) /*  url(image/Deluxe.jpg */" ;>
+	<div id="article3" class="jumbotron text-center "    ;>
 				 <div class="container text-white container-sm">
 
-				  <h1 ><mark class="btn-primary" style="border-radius: 10px;padding: 5px;">Third Article</mark></h1><br>
+				  <h1 ><mark class="btn-primary" style="border-radius: 10px;">Third Article</mark></h1><br>
 						<h2>It Hurts When Someone Too close Changes Too Fast</h2>
+
 
 				  	<br><br>
 
@@ -171,6 +176,6 @@
 				</div>
 		</div>
 
-
+	</main>
     </body>
 </html>
