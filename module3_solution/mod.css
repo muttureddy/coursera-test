@@ -1,4 +1,28 @@
-.menu h1{
+@media (min-width: 768px) {
+    .nav-item {
+        display: none;
+    }
+}
+
+.nav-item {
+    background-color: rgb(95, 93, 88);
+    color: wheat;
+    border: solid 1px wheat;
+    box-sizing: border-box;
+}
+
+h1 {
+    margin-top: 40px;
+}
+
+#content-div-1, #content-div-2, #content-div-3 {
+    background-color: rgb(95, 93, 88);
+    box-sizing: border-box;
+    padding: 3%;
+    border: solid 10px white;
+    color: black;
+}
+/* .menu h1{
     text-align: center;
     color:#009;
     padding: 20px;
@@ -24,7 +48,7 @@
 	width: 95%;
 	margin-bottom: 50px;
 }
-
+*/
 footer{
 	background-color: #abb;
-}
+} 
