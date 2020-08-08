@@ -1,0 +1,30 @@
+.menu h1{
+    text-align: center;
+    color:#009;
+    padding: 20px;
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+.nav-item{
+	padding: 0px 10px 0px 10px;
+
+}
+.headern{
+	margin-left: 100px
+	color:#aaa;
+}
+#space{
+	margin-right: 60px;
+}
+
+#Breakfast,#Meals ,#Chats{
+	border:1px solid red;
+	background-color: #aaa;
+	width: 80%;
+	margin-bottom: 50px;
+}
+
+footer{
+	background-color: #abb;
+}
