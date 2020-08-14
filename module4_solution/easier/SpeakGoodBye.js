@@ -5,6 +5,7 @@
 
     byeSpeaker.speak = function (name) {
   		console.log(speakWord + " " + name);
+  		return (byeSpeaker.speakWord + " " + userName);
 	}
 
 	window.byeSpeaker = byeSpeaker;
