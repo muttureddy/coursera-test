@@ -7,7 +7,7 @@ h2,
 h3,
 h4,
 h5,
-h6,p {
+h6{
   font-family: 'Catamaran';
   font-weight: 800 !important;
   font-size: 2em;
@@ -15,3 +15,8 @@ h6,p {
 
 #op{
   background-color: #099;}
+
+ .op{
+
+ 	font-size: 1.7em;
+ }
